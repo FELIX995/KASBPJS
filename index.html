@@ -4,24 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0f766e">
-<title>Kas BPJS 4 Bersaudara • 2026–2100</title>
+<title>Kas BPJS 4 Bersaudara</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f3f7f6;color:#17302f;font-family:Arial,sans-serif}.app{max-width:900px;margin:auto;padding:14px 14px 50px}
-.hero{background:#0f766e;color:#fff;padding:22px 20px;border-radius:0 0 24px 24px;box-shadow:0 8px 25px #0001}.hero h1{margin:0;font-size:25px}.hero p{margin:7px 0 0;font-size:14px}
-.notice{margin:14px 0;padding:11px 14px;border-radius:12px;background:#ecfdf5;border:1px solid #86efac;font-size:13px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:#fff;border-radius:16px;padding:15px;box-shadow:0 5px 18px #00000010}.label{font-size:13px;color:#526463}.value{font-size:20px;font-weight:800;margin-top:5px}.money{color:#087f5b}
-.section{margin-top:25px}.section h2{font-size:19px;margin:0 0 12px}.people{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.person{background:#fff;border:1px solid #dbe5e3;border-radius:14px;padding:13px;cursor:pointer}.person:hover{border-color:#0f766e}.person b{display:block}.person small{color:#64748b}
-.filters{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}select,input{width:100%;padding:12px;border:1px solid #cbd5d1;border-radius:10px;background:#fff;font-size:14px}
-.item{background:#fff;border-radius:16px;padding:15px;margin:10px 0;box-shadow:0 5px 18px #0000000d;display:grid;grid-template-columns:1fr auto;gap:12px}.item h3{margin:0 0 4px;font-size:16px}.meta{font-size:13px;color:#64748b;line-height:1.55}.right{text-align:right}.price{font-weight:800;font-size:16px}
-.badge{display:inline-block;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:700;margin:6px 0}.ok{background:#dcfce7;color:#166534}.no{background:#fee2e2;color:#991b1b}
-button{border:0;border-radius:9px;padding:9px 12px;color:#fff;font-weight:700;cursor:pointer;margin-left:5px}.btn-edit{background:#2563eb}.btn-lunas{background:#15803d}.btn-batal{background:#dc2626}.empty{text-align:center;padding:25px;color:#64748b}
-.modal{display:none;position:fixed;inset:0;background:#0008;z-index:20;padding:18px;align-items:center;justify-content:center}.modal.show{display:flex}.box{background:#fff;width:min(500px,100%);border-radius:18px;padding:20px;max-height:90vh;overflow:auto}.box h2{margin-top:0}.row{margin:11px 0}.row label{display:block;font-size:13px;margin-bottom:5px;font-weight:700}.actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.actions button{margin:0}.cancel{background:#64748b}.small{font-size:12px;color:#64748b;margin-top:10px}
-@media(max-width:700px){.grid,.people{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.app{padding:0 10px 35px}.hero{margin:0 -10px;border-radius:0 0 20px 20px}.grid{gap:8px}.card{padding:12px}.value{font-size:17px}.item{grid-template-columns:1fr}.right{text-align:left}.right button{margin:5px 5px 0 0}.filters{grid-template-columns:1fr}.people{grid-template-columns:repeat(2,1fr)}}
+header{background:#0f766e;color:#fff;padding:22px 20px;border-radius:0 0 24px 24px}.hero h1{margin:0;font-size:25px}.hero p{margin:7px 0 0;font-size:14px}
+.card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 5px 18px #00000010;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.label{font-size:12px;color:#64748b}.value{font-size:20px;font-weight:800;margin-top:4px}.money{color:#087f5b}
+.notice{padding:11px 13px;border-radius:12px;background:#ecfdf5;border:1px solid #86efac;font-size:13px}
+.filters{display:grid;grid-template-columns:1fr 1fr;gap:10px}select,input{width:100%;padding:12px;border:1px solid #cbd5d1;border-radius:10px;background:#fff;font-size:14px}
+.item{background:#fff;border-radius:16px;padding:15px;margin:10px 0;box-shadow:0 5px 18px #0000000d;display:grid;grid-template-columns:1fr auto;gap:12px}.item h3{margin:0 0 4px;font-size:16px}.meta{font-size:13px;color:#64748b;line-height:1.55}.right{text-align:right}.badge{display:inline-block;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:700;margin:5px 0}.ok{background:#dcfce7;color:#166534}.no{background:#fee2e2;color:#991b1b}
+button{border:0;border-radius:9px;padding:10px 13px;color:#fff;font-weight:700;cursor:pointer}.btn{background:#0f766e}.edit{background:#2563eb}.red{background:#dc2626}.gray{background:#64748b}.login{max-width:420px;margin:60px auto}.login h1{text-align:center}.login .card{padding:24px}.login button{width:100%;margin-top:10px}.error{color:#b91c1c;font-size:13px;margin-top:8px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px}.hidden{display:none!important}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.app{padding:0 10px 35px}header{margin:0 -10px;border-radius:0 0 20px 20px}.item{grid-template-columns:1fr}.right{text-align:left}.filters{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="app">
-<header class="hero"><h1>💰 Kas BPJS 4 Bersaudara</h1><p>Agustus 2026 — Desember 2100 • <span id="online">Menghubungkan...</span></p></header>
+<div id="loginPage" class="login">
+<div class="card">
+<h1>🔐 Kas BPJS</h1>
+<p style="text-align:center;color:#64748b">Area khusus keluarga</p>
+<label>Password</label>
+<input id="password" type="password" placeholder="Masukkan password">
+<button class="btn" onclick="login()">Masuk</button>
+<div id="loginError" class="error"></div>
+<p style="font-size:12px;color:#64748b">Akses dibatasi. Jangan bagikan password.</p>
+</div>
+</div>
+
+<div id="app" class="app hidden">
+<header class="hero"><div class="top"><div><h1>💰 Kas BPJS 4 Bersaudara</h1><p>Agustus 2026 — Desember 2100 • <span id="online">Menghubungkan...</span></p></div><button class="gray" onclick="logout()">Keluar</button></div></header>
 <div id="notice" class="notice">⏳ Menghubungkan ke database...</div>
 <section class="grid">
 <div class="card"><div class="label">Total Iuran</div><div class="value" id="total">Rp0</div></div>
@@ -29,48 +38,34 @@ button{border:0;border-radius:9px;padding:9px 12px;color:#fff;font-weight:700;cu
 <div class="card"><div class="label">Masuk Kas</div><div class="value money" id="kas">Rp0</div></div>
 <div class="card"><div class="label">Sudah Lunas</div><div class="value" id="lunas">0 / 0</div></div>
 </section>
-
-<section class="section"><h2>👨‍👩‍👧‍👦 Pembagian</h2><div class="people">
-<div class="person" onclick="pickName('Feni')"><b>Feni</b><small>Mulai Agustus 2026</small></div>
-<div class="person" onclick="pickName('Fendi')"><b>Fendi</b><small>Mulai September 2026</small></div>
-<div class="person" onclick="pickName('Felix')"><b>Felix</b><small>Mulai Oktober 2026</small></div>
-<div class="person" onclick="pickName('Felia')"><b>Felia</b><small>Mulai November 2026</small></div>
-</div></section>
-
-<section class="section"><h2>🧾 Pembayaran</h2><div class="filters">
-<select id="filterName" onchange="render()"><option value="">Semua Nama</option><option>Feni</option><option>Fendi</option><option>Felix</option><option>Felia</option></select>
-<select id="filterStatus" onchange="render()"><option value="">Semua Status</option><option value="Lunas">Lunas</option><option value="Belum Bayar">Belum Bayar</option></select>
-</div><div id="list"></div></section>
-
-<section class="section"><h2>📊 Rekap Kas</h2><div class="card"><div class="label">Kas dari pembayaran yang sudah lunas</div><div class="value money" id="kasLunas">Rp0</div><div class="small">Iuran Rp100.000 = Rp70.000 BPJS + Rp30.000 Kas.</div></div></section>
+<section class="card"><div class="top"><h2 style="margin:0">🧾 Pembayaran</h2><span style="font-size:12px;color:#64748b">Admin</span></div><br>
+<div class="filters"><select id="filterName" onchange="render()"><option value="">Semua Nama</option><option>Feni</option><option>Fendi</option><option>Felix</option><option>Felia</option></select><select id="filterStatus" onchange="render()"><option value="">Semua Status</option><option>Lunas</option><option>Belum Bayar</option></select></div></section>
+<div id="list"></div>
+<section class="card"><b>📊 Rekap Kas</b><div class="value money" id="kasLunas">Rp0</div><small style="color:#64748b">Kas berasal dari Rp30.000 setiap iuran yang lunas.</small></section>
 </div>
-
-<div class="modal" id="modal"><div class="box"><h2>✏️ Edit Pembayaran</h2>
-<div class="row"><label>Bulan</label><input id="mBulan" readonly></div><div class="row"><label>Tahun</label><input id="mTahun" readonly></div>
-<div class="row"><label>Nama</label><input id="mNama"></div><div class="row"><label>Total Iuran</label><input id="mIuran" type="number" min="0" step="1000"></div>
-<div class="row"><label>Bagian BPJS</label><input id="mBpjs" type="number" min="0" step="1000"></div><div class="row"><label>Bagian Kas</label><input id="mKas" type="number" min="0" step="1000"></div>
-<div class="row"><label>Status</label><select id="mStatus"><option>Belum Bayar</option><option>Lunas</option></select></div>
-<div class="row"><label>Tanggal Bayar</label><input id="mTanggal" type="date"></div>
-<div class="actions"><button class="cancel" onclick="closeModal()">Batal</button><button class="btn-edit" onclick="saveEdit()">Simpan</button></div>
-<div class="small">Perubahan disimpan langsung ke Supabase.</div></div></div>
 
 <script>
 const SUPABASE_URL="https://vofitwwkgdamptojgqdp.supabase.co";
 const SUPABASE_KEY="sb_publishable_pmD7nVTmdBhmiyCUlsTiAw_r8-HI6Kg";
 const TABLE="pembayaran_bpjs";
-let data=[],editingId=null;
+
+/* GANTI PASSWORD ADMIN DI SINI SEBELUM UPLOAD.
+   Catatan: password di HTML adalah perlindungan dasar.
+   Untuk keamanan kuat, gunakan Supabase Auth + RLS seperti pada README. */
+const ADMIN_PASSWORD="@4SAUDARA123";
+
+let data=[];
 const money=n=>new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(Number(n)||0);
-function notice(t,error=false){const e=document.getElementById("notice");e.textContent=t;e.style.background=error?"#fef2f2":"#ecfdf5";e.style.borderColor=error?"#fca5a5":"#86efac"}
+function isLogged(){return sessionStorage.getItem("kasbpjs_admin")==="1"}
+function login(){const p=document.getElementById("password").value;if(p===ADMIN_PASSWORD){sessionStorage.setItem("kasbpjs_admin","1");showApp()}else document.getElementById("loginError").textContent="Password salah."}
+function logout(){sessionStorage.removeItem("kasbpjs_admin");location.reload()}
+function showApp(){document.getElementById("loginPage").classList.add("hidden");document.getElementById("app").classList.remove("hidden");load()}
 async function api(path="",options={}){const r=await fetch(`${SUPABASE_URL}/rest/v1/${TABLE}${path}`,{...options,headers:{"apikey":SUPABASE_KEY,"Authorization":"Bearer "+SUPABASE_KEY,"Content-Type":"application/json","Prefer":"return=representation",...(options.headers||{})}});if(!r.ok)throw new Error(await r.text());return r.status===204?[]:await r.json()}
-async function load(){try{if(SUPABASE_KEY.includes("TEMPEL_"))throw new Error("Publishable Key belum dimasukkan ke index.html.");data=await api("?select=*&order=tahun.asc,id.asc");document.getElementById("online").textContent="Database Online";notice("🟢 Terhubung ke database online");render()}catch(e){document.getElementById("online").textContent="Offline";notice("🔴 Gagal terhubung: "+e.message,true)}}
-function render(){const n=document.getElementById("filterName").value,s=document.getElementById("filterStatus").value,shown=data.filter(x=>(!n||x.nama===n)&&(!s||x.status===s)),paid=data.filter(x=>x.status==="Lunas"),total=data.reduce((a,x)=>a+Number(x.iuran||0),0),bpjs=paid.reduce((a,x)=>a+Number(x.bpjs||0),0),kas=paid.reduce((a,x)=>a+Number(x.kas||0),0);document.getElementById("total").textContent=money(total);document.getElementById("bpjs").textContent=money(bpjs);document.getElementById("kas").textContent=money(kas);document.getElementById("kasLunas").textContent=money(kas);document.getElementById("lunas").textContent=`${paid.length} / ${data.length}`;document.getElementById("list").innerHTML=shown.length?shown.map(card).join(""):`<div class="card empty">Tidak ada data.</div>`}
-function card(x){const done=x.status==="Lunas";return `<div class="item"><div><h3>${x.bulan} ${x.tahun}</h3><div class="meta">${x.nama} • Iuran ${money(x.iuran)}<br>BPJS: ${money(x.bpjs)} • Kas: ${money(x.kas)}${done&&x.tanggal_bayar?`<br>Bayar: ${x.tanggal_bayar}`:""}</div></div><div class="right"><div class="price">${money(x.iuran)}</div><span class="badge ${done?"ok":"no"}">${done?"Lunas":"Belum Bayar"}</span><div><button class="btn-edit" onclick="openEdit(${x.id})">✏️ Edit</button>${done?`<button class="btn-batal" onclick="togglePay(${x.id},false)">↩ Batalkan Lunas</button>`:`<button class="btn-lunas" onclick="togglePay(${x.id},true)">✓ Lunas</button>`}</div></div></div>`}
-function pickName(n){document.getElementById("filterName").value=n;render();window.scrollTo({top:document.querySelectorAll(".section")[1].offsetTop-10,behavior:"smooth"})}
-function openEdit(id){const x=data.find(a=>Number(a.id)===Number(id));if(!x)return;editingId=id;document.getElementById("mBulan").value=x.bulan;document.getElementById("mTahun").value=x.tahun;document.getElementById("mNama").value=x.nama;document.getElementById("mIuran").value=x.iuran;document.getElementById("mBpjs").value=x.bpjs;document.getElementById("mKas").value=x.kas;document.getElementById("mStatus").value=x.status;document.getElementById("mTanggal").value=x.tanggal_bayar||"";document.getElementById("modal").classList.add("show")}
-function closeModal(){document.getElementById("modal").classList.remove("show");editingId=null}
-async function saveEdit(){const body={nama:document.getElementById("mNama").value.trim(),iuran:Number(document.getElementById("mIuran").value)||0,bpjs:Number(document.getElementById("mBpjs").value)||0,kas:Number(document.getElementById("mKas").value)||0,status:document.getElementById("mStatus").value,tanggal_bayar:document.getElementById("mTanggal").value||null};if(!body.nama)return alert("Nama wajib diisi.");try{await api("?id=eq."+editingId,{method:"PATCH",body:JSON.stringify(body)});closeModal();await load();alert("✅ Pembayaran tersimpan online.")}catch(e){alert("Gagal menyimpan: "+e.message)}}
-async function togglePay(id,lunas){const body=lunas?{status:"Lunas",tanggal_bayar:new Date().toISOString().slice(0,10)}:{status:"Belum Bayar",tanggal_bayar:null};try{await api("?id=eq."+id,{method:"PATCH",body:JSON.stringify(body)});await load()}catch(e){alert("Gagal mengubah status: "+e.message)}}
-load();
+async function load(){try{if(SUPABASE_KEY.includes("TEMPEL_"))throw Error("Publishable Key belum dimasukkan.");data=await api("?select=*&order=tahun.asc,id.asc");document.getElementById("online").textContent="Database Online";document.getElementById("notice").textContent="🟢 Terhubung ke database online";render()}catch(e){document.getElementById("notice").textContent="🔴 "+e.message}}
+function render(){const n=document.getElementById("filterName").value,s=document.getElementById("filterStatus").value,shown=data.filter(x=>(!n||x.nama===n)&&(!s||x.status===s)),paid=data.filter(x=>x.status==="Lunas"),total=data.reduce((a,x)=>a+Number(x.iuran||0),0),bpjs=paid.reduce((a,x)=>a+Number(x.bpjs||0),0),kas=paid.reduce((a,x)=>a+Number(x.kas||0),0);document.getElementById("total").textContent=money(total);document.getElementById("bpjs").textContent=money(bpjs);document.getElementById("kas").textContent=money(kas);document.getElementById("kasLunas").textContent=money(kas);document.getElementById("lunas").textContent=`${paid.length} / ${data.length}`;document.getElementById("list").innerHTML=shown.map(x=>{let d=x.status==="Lunas";return `<div class="item"><div><h3>${x.bulan} ${x.tahun}</h3><div class="meta">${x.nama} • Iuran ${money(x.iuran)}<br>BPJS: ${money(x.bpjs)} • Kas: ${money(x.kas)}${d&&x.tanggal_bayar?`<br>Bayar: ${x.tanggal_bayar}`:""}</div></div><div class="right"><span class="badge ${d?"ok":"no"}">${x.status}</span><br><button class="edit" onclick="edit(${x.id})">✏️ Edit</button> ${d?`<button class="red" onclick="pay(${x.id},false)">↩ Batalkan</button>`:`<button class="btn" onclick="pay(${x.id},true)">✓ Lunas</button>`}</div></div>`}).join("")||'<div class="card">Tidak ada data.</div>'}
+async function pay(id,on){try{await api("?id=eq."+id,{method:"PATCH",body:JSON.stringify(on?{status:"Lunas",tanggal_bayar:new Date().toISOString().slice(0,10)}:{status:"Belum Bayar",tanggal_bayar:null})});await load()}catch(e){alert(e.message)}}
+async function edit(id){let x=data.find(a=>Number(a.id)===Number(id));if(!x)return;let n=prompt("Nama:",x.nama);if(n===null)return;let status=prompt("Status (Lunas / Belum Bayar):",x.status);if(status===null)return;let t=prompt("Tanggal bayar YYYY-MM-DD:",x.tanggal_bayar||"");try{await api("?id=eq."+id,{method:"PATCH",body:JSON.stringify({nama:n.trim(),status:status,tanggal_bayar:t||null})});await load();alert("✅ Tersimpan")}catch(e){alert(e.message)}}
+if(isLogged())showApp();
 </script>
 </body>
 </html>
