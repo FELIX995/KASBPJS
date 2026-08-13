@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kas BPJS 4 Bersaudara</title>
+<style>
+body{font-family:Arial;margin:0;background:#f3f7f6;color:#17302f}.app{max-width:760px;margin:auto}.hero{background:#0f766e;color:#fff;padding:24px 16px;border-radius:0 0 24px 24px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px}.card,.row{background:#fff;border-radius:15px;padding:14px;box-shadow:0 3px 12px #0001}.value{font-size:20px;font-weight:bold;margin-top:5px}.teal{color:#0f766e}.green{color:#15803d}.section{padding:0 14px 14px}.controls{display:flex;gap:8px}.controls select{flex:1;padding:10px}.row{display:flex;justify-content:space-between;margin-bottom:9px}.sub{font-size:12px;color:#687876;margin-top:4px}.badge{padding:5px 8px;border-radius:20px;font-size:11px}.paid{background:#dcfce7;color:#166534}.unpaid{background:#fee2e2;color:#991b1b}button{border:0;border-radius:8px;padding:8px 10px;background:#2563eb;color:white;font-weight:bold;margin-top:6px}.warn{margin:14px;padding:10px;background:#fff7ed;border-radius:10px;font-size:12px}
+</style>
+</head>
+<body><div class="app">
+<div class="hero"><h2>💰 Kas BPJS 4 Bersaudara</h2><div>Agustus 2026 — Desember 2028</div></div>
+<div class="warn">Mode lokal. Setelah Supabase dihubungkan, data dapat disimpan online.</div>
+<div class="grid">
+<div class="card">Total Iuran<div class="value" id="total">Rp0</div></div>
+<div class="card">Bayar BPJS<div class="value teal" id="bpjs">Rp0</div></div>
+<div class="card">Masuk Kas<div class="value green" id="kas">Rp0</div></div>
+<div class="card">Lunas<div class="value" id="lunas">0 / 29</div></div>
+</div>
+<div class="section"><h3>📅 Pembayaran</h3>
+<div class="controls"><select id="filter"><option>Semua</option><option>Feni</option><option>Fendi</option><option>Felix</option><option>Felia</option></select></div>
+<div id="list"></div></div>
+</div>
+<script>
+const names=["Feni","Fendi","Felix","Felia"],months=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+let data=[],id=0;
+for(let y=2026;y<=2028;y++)for(let m=y===2026?8:1;m<=12;m++){data.push({id:id++,bulan:months[m-1],tahun:y,nama:names[(id-1)%4],iuran:100000,bpjs:70000,kas:30000,status:"Belum Bayar"})}
+function rp(n){return new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(n)}
+function render(){let f=filter.value,a=data.filter(x=>f==="Semua"||x.nama===f);list.innerHTML=a.map(x=>`<div class="row"><div><b>${x.bulan} ${x.tahun}</b><div class="sub">${x.nama} • ${rp(x.iuran)}</div></div><div><span class="badge ${x.status==="Lunas"?"paid":"unpaid"}">${x.status}</span><br><button onclick="toggle(${x.id})">${x.status==="Lunas"?"Batal":"Lunas"}</button></div></div>`).join("");total.textContent=rp(data.reduce((a,x)=>a+x.iuran,0));bpjs.textContent=rp(data.reduce((a,x)=>a+x.bpjs,0));kas.textContent=rp(data.reduce((a,x)=>a+x.kas,0));lunas.textContent=data.filter(x=>x.status==="Lunas").length+" / "+data.length}
+function toggle(i){let x=data.find(x=>x.id===i);x.status=x.status==="Lunas"?"Belum Bayar":"Lunas";render()}filter.onchange=render;render();
+</script></body></html>
